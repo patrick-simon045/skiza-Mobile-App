@@ -1,8 +1,8 @@
 # The Prosperity Public License 3.0.0
 
-Contributor: $Danford Kija
+Contributor: Danford Kija
 
-Source Code: $address
+Source Code: address comming
 
 ## Purpose
 
