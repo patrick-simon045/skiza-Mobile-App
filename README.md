@@ -1,1 +1,1 @@
-# SkeeZah-Mobile-App
+# skiza-Mobile-App
