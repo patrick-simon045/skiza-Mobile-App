@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: "skiza App",
           theme: ThemeData(
-              textTheme: textTheme: GoogleFonts.latoTextTheme(
+              textTheme: GoogleFonts.latoTextTheme(
           Theme.of(context).textTheme,
         ),
               primaryColor:Color(0xFFCAD827) ,
