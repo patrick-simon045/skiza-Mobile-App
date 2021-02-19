@@ -24,16 +24,27 @@ class _AuthHomeState extends State<AuthHome> {
       backgroundColor: Color(0xFFF2F2F2),
       body: Stack(
         children: [
-          Container(
-            height: (_height / 2) + 170,
-            width: _width,
-            color: Color(0xFFFFFFFF),
-            child: Center(
-              child: SvgPicture.asset(
-                "assets/images/skeezah_logo.svg",
-                color: Color(0xFF626262),
-                height: 80,
-                width: 80,
+          Material(
+            elevation: 0,
+                      child: Container(
+
+            decoration: BoxDecoration(
+              color: Color(0xFFFFFFFF),
+              borderRadius: BorderRadius.only(
+              bottomLeft:Radius.circular(90.0),
+              bottomRight: Radius.circular(90.0),
+              ),
+            ),
+              height: (_height / 2) + 170,
+              width: _width,
+              
+              child: Center(
+                child: SvgPicture.asset(
+                  "assets/images/skeezah_logo.svg",
+                  color: Color(0xFF626262),
+                  height: 80,
+                  width: 80,
+                ),
               ),
             ),
           ),
