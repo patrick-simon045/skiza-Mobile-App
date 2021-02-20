@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:skiza/core/components/auth_button.dart';
+import 'package:skiza/modules/authentication/login/login.dart';
+import 'package:skiza/modules/authentication/register/register_basic_details.dart';
 
 class AuthHome extends StatefulWidget {
   @override
@@ -9,11 +11,14 @@ class AuthHome extends StatefulWidget {
 
 class _AuthHomeState extends State<AuthHome> {
   void toLogin() {
-    print("on Login");
+    Navigator.push(
+        context, new MaterialPageRoute(builder: (context) => new Login()));
   }
 
   void toSignUp() {
-    print("on Signup");
+    
+   Navigator.push(
+        context, new MaterialPageRoute(builder: (context) => new RegisterBasicDeatils()));
   }
 
   @override
@@ -23,31 +28,29 @@ class _AuthHomeState extends State<AuthHome> {
     return Scaffold(
       backgroundColor: Color(0xFFF2F2F2),
       body: Stack(
-        children: [ Container(
-
+        children: [
+          Container(
             decoration: BoxDecoration(
               color: Color(0xFFFFFFFF),
               borderRadius: BorderRadius.only(
-              bottomLeft:Radius.circular(40.0),
-              bottomRight: Radius.circular(40.0),
+                bottomLeft: Radius.circular(40.0),
+                bottomRight: Radius.circular(40.0),
               ),
             ),
-              height: (_height / 2) + 170,
-              width: _width,
-              
-              child: Material(
-                    elevation: 0,
-                              child: Center(
-                  child: SvgPicture.asset(
-                    "assets/images/skeezah_logo.svg",
-                    color: Color(0xFF626262),
-                    height: 80,
-                    width: 80,
-                  ),
+            height: (_height / 2) + 170,
+            width: _width,
+            child: Material(
+              elevation: 0,
+              child: Center(
+                child: SvgPicture.asset(
+                  "assets/images/skeezah_logo.svg",
+                  color: Color(0xFF626262),
+                  height: 80,
+                  width: 80,
                 ),
               ),
             ),
-          
+          ),
           Container(
             padding: EdgeInsets.only(top: (_height / 2) + 172),
             child: Column(

@@ -18,6 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void navigationPage() async {
     Navigator.push(
         context, new MaterialPageRoute(builder: (context) => new AuthHome()));
+  
   }
 
   @override
