@@ -23,31 +23,31 @@ class _AuthHomeState extends State<AuthHome> {
     return Scaffold(
       backgroundColor: Color(0xFFF2F2F2),
       body: Stack(
-        children: [
-          Material(
-            elevation: 0,
-                      child: Container(
+        children: [ Container(
 
             decoration: BoxDecoration(
               color: Color(0xFFFFFFFF),
               borderRadius: BorderRadius.only(
-              bottomLeft:Radius.circular(90.0),
-              bottomRight: Radius.circular(90.0),
+              bottomLeft:Radius.circular(40.0),
+              bottomRight: Radius.circular(40.0),
               ),
             ),
               height: (_height / 2) + 170,
               width: _width,
               
-              child: Center(
-                child: SvgPicture.asset(
-                  "assets/images/skeezah_logo.svg",
-                  color: Color(0xFF626262),
-                  height: 80,
-                  width: 80,
+              child: Material(
+                    elevation: 0,
+                              child: Center(
+                  child: SvgPicture.asset(
+                    "assets/images/skeezah_logo.svg",
+                    color: Color(0xFF626262),
+                    height: 80,
+                    width: 80,
+                  ),
                 ),
               ),
             ),
-          ),
+          
           Container(
             padding: EdgeInsets.only(top: (_height / 2) + 172),
             child: Column(
