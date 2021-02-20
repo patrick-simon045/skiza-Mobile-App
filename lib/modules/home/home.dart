@@ -4,8 +4,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Text("home screen"),
+      body: Center(
+        child: Text("data"),
       ),
     );
   }
