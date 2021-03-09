@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:skiza/core/components/app_drawer_component.dart';
 import 'package:skiza/core/components/search_component.dart';
 import 'package:skiza/core/utils/app_utils.dart';
 
 class HomeAppBarComponent extends StatelessWidget {
   final TextEditingController namecontroller = new TextEditingController();
 
-  void appDrawer(BuildContext context) {
-      Widget default_widget = GestureDetector(
-    child: Text("kija"),
-    onTap: () {
-      Navigator.pop(context,"Hello");
-    },
-  );
-  
-    return AppUtil.showPopUpModal(context, default_widget, true);
+  void appDrawer(BuildContext context) async {
+    String drawerResponse =
+        await AppUtil.showPopUpModal(context, AppDrawerComponent(), true);
+    if (drawerResponse != null) {
+      switch (drawerResponse) {
+        case "theme":
+          print("Darkmode");
+          break;
+        case "auth":
+          print("Logout");
+          break;
+        case "account":
+          print("Account");
+          break;
+        default:
+          print("no further options");
+      }
+    }
   }
 
 // AppUtil
